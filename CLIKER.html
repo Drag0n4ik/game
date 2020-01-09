@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>CLICER</title>
+
+<script type="text/javascript">
+	
+
+	let nam = 0;
+	let nam_1 =0.5;
+	let namSec = 0;
+
+
+
+
+		function plus(){
+
+			nam+=nam_1;
+			
+			odin.innerHTML =  "Очки : " + nam;
+
+			
+		}
+
+
+
+
+		function pokypka_1(){
+
+			if (nam>=20){
+			nam = nam - 20;
+			nam_1=nam_1 + 0.5;
+			
+			plus_1.innerHTML = "+" + nam_1 ;
+			odin.innerHTML =  "Очки : " + nam;
+
+}
+	}
+
+			function pokypkaPlus10(){
+			if(nam>=50){
+				nam = nam - 50;
+				nam_1 = nam_1 + 1.5;
+				plus_1.innerHTML = "+" + nam_1;
+				odin.innerHTML =  "Очки : " + nam;
+			}
+		}
+
+	function pokypkaPlus100(){
+		if(nam>=100){
+			nam = nam - 100;
+			nam_1 = nam_1 + 3.0;
+			plus_1.innerHTML = "+" + nam_1;
+			odin.innerHTML =  "Очки : " + nam;
+		}
+	}
+
+
+	let a = 0;
+	let Infinite;
+	let namS_10 = 1;
+	let sec =0;
+	function pokypkaS10(){
+		if (nam>=1000){
+  				nam = nam-1000;
+  				sec++;
+		var interval = setInterval(function() { 
+   			if (a <= Infinite) { 
+     		 alert("Infinite");
+      		
+   		}
+  		else
+  			
+  				nam += namS_10;
+  				plus_1.innerHTML = "+" + nam_1 + "(" + sec + "s" + ")";
+				odin.innerHTML =  "Очки : " + nam;
+  			
+}, 1000);
+	}}
+
+
+
+
+let b = 0;
+	
+	let namS_30 = 3;
+	function pokypkaS30(){
+		if (nam>=3000){
+  				nam = nam-3000;
+  				sec= sec+3;
+		var interval = setInterval(function() { 
+   			if (a <= Infinite) { 
+     		 alert("Infinite");
+      		
+   		}
+  		else
+  			
+  				nam += namS_30;
+  				plus_1.innerHTML = "+" + nam_1 + "(" + sec + "s" + ")";
+				odin.innerHTML =  "Очки : " + nam;
+  			
+}, 1000);
+	}}
+
+
+
+
+let c = 0;
+	
+	let namS_50 = 5;
+	function pokypkaS50(){
+		if (nam>=5000){
+  				nam = nam-5000;
+  				sec=sec+5;
+		var interval = setInterval(function() { 
+   			if (a <= Infinite) { 
+     		 alert("Infinite");
+      		
+   		}
+  		else
+  			
+  				nam += namS_50;
+  				plus_1.innerHTML = "+" + nam_1 + "(" + sec + "s" + ")";
+				odin.innerHTML =  "Очки : " + nam;
+  			
+}, 1000);
+	}}
+
+
+
+	</script>
+</head>
+
+
+
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+		background: black;
+
+	}
+	#container{
+		width: 500px;
+		height: 300px;
+		border: 5px solid red;
+		display: block;
+		margin: 150px auto;	
+		background: #887;
+
+
+	}
+	span {
+		display: block;
+		margin: auto;
+		text-align: center;
+		background: #887;
+	}
+	button{
+		border: 2px solid green;
+	}
+	#plus_1:hover , #pokypkaPlus:hover , #pokypka_sec:hover{
+		background: #894;
+	}
+	#plus_1{
+		width: 100px;
+		height: 50px;
+		display: block;
+		margin: auto;
+		background: white;
+	}
+	#pokypka_1{
+		width: 100px;
+		height: 30px;
+		display: block;
+		margin-top: 10px;
+		background: white;
+			
+	}
+	#pokypka{
+		width: 100%;
+		background: #887;
+
+	}
+	#Plus{
+		width: 20%;
+		background: #887;
+		float: left;
+
+	}
+	#pokypkaPlus{
+		width: 120px;
+		height: 30px;
+		margin: 10px;
+		float: left;
+		background: white;
+			
+	}
+	#sec{
+		width: 30%;
+		float: right;
+		background: #887;
+	}
+	#pokypka_sec{
+
+		width: 150px;
+		height: 30px;
+		margin: 10px;
+		float: right;
+		background: white;
+	}
+</style>
+<body>
+
+	<div id="container">
+		<span id="odin">Очки : 0</span>
+		<br>	
+		<button id="plus_1" onclick="plus(this)">+0.5</button>
+
+		<div id="pokypka">
+			<div id="Plus">
+				<button id="pokypkaPlus" onclick="pokypka_1(this)">купить + 0.5(20)</button>
+				<button id="pokypkaPlus" onclick="pokypkaPlus10()">купить + 1.5(50)</button>
+				<button id="pokypkaPlus" onclick="pokypkaPlus100()">купить + 3.0(100)</button>
+			</div>
+		<div id="sec">
+		<button id="pokypka_sec" onclick="pokypkaS10()">купить + 1/s(1000)</button>
+		<button id="pokypka_sec" onclick="pokypkaS30()">купить + 3/s(3000)</button>
+		<button id="pokypka_sec" onclick="pokypkaS50()">купить + 5/s(5000)</button>
+		</div>
+
+		</div>
+	</div>
+
+
+	
+
+
+
+</body>
+</html>
