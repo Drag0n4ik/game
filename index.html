@@ -6,15 +6,37 @@
 
 <script type="text/javascript">
 	
-
-	let nam = 0;
+	// переменные плюса 
+	let nam = 0; 
 	let nam_1 =0.5;
+	let razPlus1 = 0;
+	let razPlus2 = 0;
+	let razPlus3 = 0;
+	let plus1 = 0.5;
+	let plus2 = 1.5;
+	let plus3 = 3;
+	let cena1 = 20;
+	let cena2 = 50; 
+	let cena3 = 100; 
+	let colPopolnenii_1 = 0;
+	let colPopolnenii_2 = 0; 
+	let colPopolnenii_3 = 0; 
+	let cenaPopolnenie_1 = 1000;
+	let cenaPopolnenie_2 = 3000;
+	let cenaPopolnenie_3 = 5000;
+
+	// переменные плюса в секунду 
 	let namSec = 0;
+	let a = 0;
+	let b = 0;
+	let с = 0;
+	let namS_10 = 1;
+	let sec = 0;
+	let namS_30 = 3;
 
 
 
-
-		function plus(){
+		function clic(){
 
 			nam+=nam_1;
 			
@@ -22,45 +44,239 @@
 
 			
 		}
-
-
-
-
-		function pokypka_1(){
-
-			if (nam>=20){
-			nam = nam - 20;
-			nam_1=nam_1 + 0.5;
 			
-			plus_1.innerHTML = "+" + nam_1 ;
-			odin.innerHTML =  "Очки : " + nam;
+		// блок плюс
 
-}
-	}
+		function pokypkaBlok_1() // блок покупки 1 
+		{
+						
+							switch(razPlus1) {
+							  case 0: pokypkaPlus1_1();break;
+							  case 1: pokypkaPlus1_1();break;
+							  case 2: pokypkaPlus1_1();break;
+							  case 3: pokypkaPlus1_1();break;
+							  case 4: pokypkaPlus1_1();break;
+							  case 5: pokypkaPlus1_1();break;
+							  case 6: pokypkaPlus1_1();break;
+							  case 7: pokypkaPlus1_1();break;
+							  case 8: pokypkaPlus1_1();break;
+							  case 9: pokypkaPlus1_1();pokypkaPlus_1.innerHTML = "купить + " + plus1 + "(" + cena1 + ")"  + razPlus1;  break;
 
-			function pokypkaPlus10(){
-			if(nam>=50){
-				nam = nam - 50;
-				nam_1 = nam_1 + 1.5;
-				plus_1.innerHTML = "+" + nam_1;
-				odin.innerHTML =  "Очки : " + nam;
-			}
+							  case 10: pokypkaPlus1_2();break;
+							  case 11: pokypkaPlus1_2();break;
+							  case 12: pokypkaPlus1_2();break;
+							  case 13: pokypkaPlus1_2();break;
+							  case 14: pokypkaPlus1_2();break;
+							  case 15: pokypkaPlus1_2();break;
+							  case 16: pokypkaPlus1_2();break;
+							  case 17: pokypkaPlus1_2();break;
+							  case 18: pokypkaPlus1_2();break;
+							  case 19: pokypkaPlus1_2();pokypkaPlus_1.innerHTML = "ИССЯК, ПОПОЛНИТЬ(1000)" ;break;
+
+
+
+							}
+
+
+					
+					
+
+
 		}
 
-	function pokypkaPlus100(){
-		if(nam>=100){
-			nam = nam - 100;
-			nam_1 = nam_1 + 3.0;
-			plus_1.innerHTML = "+" + nam_1;
-			odin.innerHTML =  "Очки : " + nam;
+
+		function pokypkaBlok_2() // блок покупки 2
+		{
+							switch(razPlus2) {
+							  case 0: pokypkaPlus5_1();break;
+							  case 1: pokypkaPlus5_1();break;
+							  case 2: pokypkaPlus5_1();break;
+							  case 3: pokypkaPlus5_1();break;
+							  case 4: pokypkaPlus5_1();break;
+							  case 5: pokypkaPlus5_1();break;
+							  case 6: pokypkaPlus5_1();break;
+							  case 7: pokypkaPlus5_1();break;
+							  case 8: pokypkaPlus5_1();break;
+							  case 9: pokypkaPlus5_1();pokypkaPlus_2.innerHTML = "купить + " + plus2 + "(" + cena2 + ")"  + razPlus2;  break;
+
+							  case 10: pokypkaPlus5_2();break;
+							  case 11: pokypkaPlus5_2();break;
+							  case 12: pokypkaPlus5_2();break;
+							  case 13: pokypkaPlus5_2();break;
+							  case 14: pokypkaPlus5_2();break;
+							  case 15: pokypkaPlus5_2();break;
+							  case 16: pokypkaPlus5_2();break;
+							  case 17: pokypkaPlus5_2();break;
+							  case 18: pokypkaPlus5_2();break;
+							  case 19: pokypkaPlus5_2();pokypkaPlus_2.innerHTML = "ИССЯК" ;break;
+
+							}
 		}
-	}
+
+		function pokypkaBlok_3() // блок покупки 3
+		{
+
+							switch(razPlus3) {
+							  case 0: pokypkaPlus10_1();break;
+							  case 1: pokypkaPlus10_1();break;
+							  case 2: pokypkaPlus10_1();break;
+							  case 3: pokypkaPlus10_1();break;
+							  case 4: pokypkaPlus10_1();break;
+							  case 5: pokypkaPlus10_1();break;
+							  case 6: pokypkaPlus10_1();break;
+							  case 7: pokypkaPlus10_1();break;
+							  case 8: pokypkaPlus10_1();break;
+							  case 9: pokypkaPlus10_1();pokypkaPlus_3.innerHTML = "купить + " + plus3 + "(" + cena3 + ")"  + razPlus3;  break;
+
+							  case 10: pokypkaPlus10_2();break;
+							  case 11: pokypkaPlus10_2();break;
+							  case 12: pokypkaPlus10_2();break;
+							  case 13: pokypkaPlus10_2();break;
+							  case 14: pokypkaPlus10_2();break;
+							  case 15: pokypkaPlus10_2();break;
+							  case 16: pokypkaPlus10_2();break;
+							  case 17: pokypkaPlus10_2();break;
+							  case 18: pokypkaPlus10_2();break;
+							  case 19: pokypkaPlus10_2();pokypkaPlus_3.innerHTML = "ИССЯК" ;break;
+
+							}
+
+		}
+					// функции блока 1
 
 
-	let a = 0;
-	let Infinite;
-	let namS_10 = 1;
-	let sec =0;
+										function pokypkaPlus1_1() // от 0 до 10 по + 0.5
+										{
+
+											if (nam>=cena1)
+											{
+											nam = nam - cena1;
+											nam_1=nam_1 + plus1;
+											
+											plus_1.innerHTML = "+" + nam_1 ;
+											odin.innerHTML =  "Очки : " + nam;
+											razPlus1++;
+											pokypkaPlus_1.innerHTML = "купить + " + plus1 + "(" + cena1 + ")"  + razPlus1; 
+
+											}
+
+											if(razPlus1==10){
+												cena1 +=10;
+												plus1 +=0.5;
+												pokypkaPlus_1.innerHTML = "купить + " + plus1 + "(" + cena1 + ")"  + razPlus1;
+											}
+
+										}
+
+
+										function pokypkaPlus1_2() // от 10 до 20 по + 1
+										{
+
+											if (nam>=cena1)
+											{
+												nam = nam - cena1;
+												nam_1=nam_1 + plus1;
+												plus_1.innerHTML = "+" + nam_1 ;
+												odin.innerHTML =  "Очки : " + nam;
+												razPlus1++;
+												pokypkaPlus_1.innerHTML = "купить + " + plus1 + "(" + cena1 + ")"  + razPlus1;  
+											}
+
+
+
+										}
+
+					// функции блока 2 
+
+										function pokypkaPlus5_1()
+										{
+											if(nam>=cena2)
+											{
+												nam = nam - cena2;
+												nam_1 = nam_1 + plus2;
+												plus_1.innerHTML = "+" + nam_1;
+												odin.innerHTML =  "Очки : " + nam;
+												razPlus2++;
+												pokypkaPlus_2.innerHTML = "купить + " + plus2 + "(" + cena2 + ")"  + razPlus2;
+											}
+
+											if(razPlus2==10){
+												cena2 +=20;
+												plus2 +=0.5;
+												pokypkaPlus_2.innerHTML = "купить + " + plus2 + "(" + cena2 + ")"  + razPlus2;
+											}
+
+										}
+
+										function pokypkaPlus5_2()
+										{
+											if(nam>=cena2)
+											{
+												nam = nam - cena2;
+												nam_1 = nam_1 + plus2;
+												plus_1.innerHTML = "+" + nam_1;
+												odin.innerHTML =  "Очки : " + nam;
+												razPlus2++;
+												pokypkaPlus_2.innerHTML = "купить + " + plus2 + "(" + cena2 + ")"  + razPlus2;  
+											}
+										}
+
+
+					// функции блока 3
+
+										function pokypkaPlus10_1()
+										{
+											if(nam>=cena3)
+											{
+												nam = nam - cena3;
+												nam_1 = nam_1 + plus3;
+												plus_1.innerHTML = "+" + nam_1;
+												odin.innerHTML =  "Очки : " + nam;
+												razPlus3++;
+												pokypkaPlus_3.innerHTML = "купить + " + plus3 + "(" + cena3 + ")"  + razPlus3;
+											}
+
+											if(razPlus3==10)
+											{
+												cena3 +=50;
+												plus3 +=1.5;
+												pokypkaPlus_3.innerHTML = "купить + " + plus3 + "(" + cena3 + ")"  + razPlus3;
+											}
+
+										}
+
+										function pokypkaPlus10_2()
+										{
+											if(nam>=cena3)
+											{
+												nam = nam - cena3;
+												nam_1 = nam_1 + plus3;
+												plus_1.innerHTML = "+" + nam_1;
+												odin.innerHTML =  "Очки : " + nam;
+												razPlus3++;
+												pokypkaPlus_3.innerHTML = "купить + " + plus3 + "(" + cena3 + ")"  + razPlus3;  
+											}
+										}
+
+					// Функции пополнения 
+
+
+					function popolnenie()
+					{
+
+						if(nam>=cenaPopolnenie_1){
+							nam -= cenaPopolnenie_1;
+
+						}
+
+					}
+
+
+		// блок плюс в секунду 
+
+
+
+	
 	function pokypkaS10(){
 		if (nam>=1000){
   				nam = nam-1000;
@@ -82,9 +298,9 @@
 
 
 
-let b = 0;
+
 	
-	let namS_30 = 3;
+	
 	function pokypkaS30(){
 		if (nam>=3000){
   				nam = nam-3000;
@@ -106,7 +322,7 @@ let b = 0;
 
 
 
-let c = 0;
+
 	
 	let namS_50 = 5;
 	function pokypkaS50(){
@@ -142,8 +358,8 @@ let c = 0;
 
 	}
 	#container{
-		width: 500px;
-		height: 300px;
+		width: 700px;
+		height: 400px;
 		border: 5px solid red;
 		display: block;
 		margin: 150px auto;	
@@ -160,7 +376,7 @@ let c = 0;
 	button{
 		border: 2px solid green;
 	}
-	#plus_1:hover , #pokypkaPlus:hover , #pokypka_sec:hover{
+	#plus_1:hover , .pokypkaPlus:hover , #pokypka_sec:hover{
 		background: #894;
 	}
 	#plus_1{
@@ -189,10 +405,11 @@ let c = 0;
 		float: left;
 
 	}
-	#pokypkaPlus{
-		width: 120px;
-		height: 30px;
-		margin: 10px;
+	.pokypkaPlus{
+		min-width: 200px;
+		max-width: 300px;
+		min-height: 30px;
+		margin: 20px;
 		float: left;
 		background: white;
 			
@@ -203,10 +420,10 @@ let c = 0;
 		background: #887;
 	}
 	#pokypka_sec{
-
-		width: 150px;
-		height: 30px;
-		margin: 10px;
+		min-width: 200px;
+		max-width: 300px;
+		min-height: 30px;
+		margin: 20px;
 		float: right;
 		background: white;
 	}
@@ -216,13 +433,13 @@ let c = 0;
 	<div id="container">
 		<span id="odin">Очки : 0</span>
 		<br>	
-		<button id="plus_1" onclick="plus(this)">+0.5</button>
+		<button id="plus_1" onclick="clic()">+0.5</button>
 
 		<div id="pokypka">
 			<div id="Plus">
-				<button id="pokypkaPlus" onclick="pokypka_1(this)">купить + 0.5(20)</button>
-				<button id="pokypkaPlus" onclick="pokypkaPlus10()">купить + 1.5(50)</button>
-				<button id="pokypkaPlus" onclick="pokypkaPlus100()">купить + 3.0(100)</button>
+				<button class="pokypkaPlus" id="pokypkaPlus_1" onclick="pokypkaBlok_1(this)">купить + 0.5(20)</button>
+				<button class="pokypkaPlus" id="pokypkaPlus_2" onclick="pokypkaBlok_2()">купить + 1.5(50)</button>
+				<button class="pokypkaPlus" id="pokypkaPlus_3" onclick="pokypkaBlok_3()">купить + 3.0(100)</button>
 			</div>
 		<div id="sec">
 		<button id="pokypka_sec" onclick="pokypkaS10()">купить + 1/s(1000)</button>
